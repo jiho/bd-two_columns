@@ -26,8 +26,8 @@
 				
 					<?$pubType=incollection?>
 						<span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
-						<span class="fieldTitle">In:</span> <span class="container"><$fields.Booktitle.stringByRemovingCurlyBraces/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?><$fields.Chapter?>, chap. <$fields.Chapter/></$fields.Chapter?>, <span class="date"><$fields.Year/></span><br/>
-						<span class="fieldTitle">Ed(s):</span> <$editors.normalizedName.@componentsJoinedByCommaAndAnd/><br/>
+						<span class="fieldName">In:</span> <span class="container"><$fields.Booktitle.stringByRemovingCurlyBraces/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?><$fields.Chapter?>, chap. <$fields.Chapter/></$fields.Chapter?>, <span class="date"><$fields.Year/></span><br/>
+						<span class="fieldName">Ed(s):</span> <$editors.normalizedName.@componentsJoinedByCommaAndAnd/><br/>
 				
 					<?$pubType=manual?>
 						<p><span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><$fields.Organization.stringByPrependingCommaAndSpaceIfNotEmpty/><br/>
