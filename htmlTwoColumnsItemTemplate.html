@@ -15,6 +15,7 @@
 				<!-- Publication -->
 				<div class="pubInfo downlight">
 				
+					<!-- Different formats specific to each type of publication -->
 					<$pubType=article?>
 						<span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
 						<span class="container"><$fields.Journal.stringByRemovingCurlyBraces/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?>, <span class="date"><$fields.Year/></span><br/>
@@ -48,14 +49,16 @@
 					<p><span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
 					<span class="date"><$fields.Year/></span><br/>
 					<$fields.Note?><span class="fieldName">Note:</span> <$fields.Note/></$fields.Note?></p>
-		
+
 					<?$pubType?>
-						<$pubType/>
+					<!-- Default format for publications that are not in one of the above types -->
+					<$pubType/>
 						<p><$allFields.@nonEmpty>
 						<span class="fieldName"><$name/></span> <$value/><br/>
 						</$allFields.@nonEmpty></p>
 					</$pubType?>
 
+					<!-- Unique identifiers -->
 					<$fields.Doi?>
 						<span class="fieldName">DOI:</span> <a href="http://dx.doi.org/<$fields.Doi/>"><$fields.Doi/></a><br/>
 					</$fields.Doi?>
@@ -65,6 +68,7 @@
 					
 					<p class="spacer"></p>
 
+					<!-- LaTeX related stuff -->
 					<$citeKey/> (<$pubType/>)
 				</div>
 
@@ -94,7 +98,7 @@
 		
 			<td class="right">
 				
-				<!-- Personal anotations -->
+				<!-- Personal annotations -->
 				<$fields.Annote?>
 					<div class="annote">
 						<span class="fieldName">Notes</span> &mdash; <$fields.Annote.htmlString/>
