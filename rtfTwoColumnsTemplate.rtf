@@ -1,8 +1,7 @@
 {\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf320
 {\fonttbl\f0\fnil\fcharset0 LucidaSans;\f1\fnil\fcharset0 LucidaSans-Demi;\f2\fswiss\fcharset0 Helvetica;
 }
-{\colortbl;\red255\green255\blue255;\red102\green102\blue102;\red0\green0\blue0;\red191\green191\blue191;
-}
+{\colortbl;\red255\green255\blue255;\red102\green102\blue102;}
 \vieww18220\viewh23120\viewkind0
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\ql\qnatural\pardirnatural
 
@@ -21,7 +20,7 @@
 \clvertalt \clshdrawnil \clwWidth18720\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl100 \clpadr100 \gaph\cellx2880
 \clvertalt \clshdrawnil \clwWidth200\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl100 \clpadr100 \gaph\cellx5760
 \clvertalt \clshdrawnil \clwWidth18240\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl100 \clpadr100 \gaph\cellx8640
-\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\pardirnatural
+\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 \cf2 <$pubType=article?>\
 <$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/>\
 
@@ -42,14 +41,12 @@
 \i0 , <$fields.Publisher.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Address.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?><$fields.Chapter?>, chap. <$fields.Chapter/></$fields.Chapter?>, 
 \f1\b <$fields.Year/>
 \f0\i\b0 \
-\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 
-\i0 \cf2 <$editors?>
+\i0 <$editors?>
 \f1\b Ed(s):
 \f0\i\b0  
 \i0 <$editors.normalizedName.@componentsJoinedByCommaAndAnd/></$editors?>\
-\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\pardirnatural
-\cf2 <?$pubType=manual?>\
+<?$pubType=manual?>\
 <$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/><$fields.Organization.stringByPrependingCommaAndSpaceIfNotEmpty/>\
 <$fields.Publisher?><$fields.Publisher/>, </$fields.Publisher?><$fields.Address?><$fields.Address/>, </$fields.Address?><$fields.Pages?><$fields.Pages/>pp. </$fields.Pages?>
 \f1\b <$fields.Year/>
@@ -96,29 +93,34 @@
 \f1\b ISBN:
 \f0\b0  <$fields.Isbn/>\
 </$fields.Isbn?>\
+\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 
 \fs8 \cf0  
 \fs22 \cf2 \
 <$citeKey/> (<$pubType/>)
 \fs8 \cf0 \
+\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 
 \fs22 \cf2 <$fields.Keywords?>\
+\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 
 \fs8 \cf0  \
+\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 
 \f1\b\fs22 \cf2 Keywords \'97
-\f0\b0  \cf3 <$fields.Keywords/>\cf2 \
+\f0\b0  \cf0 <$fields.Keywords/>\cf2 \
 </$fields.Keywords?>\
-<$fields.Location?>\
-
-\f1\b Location \'97
-\f0\b0  \cf3 <$fields.Location/>\cf2 \
-</$fields.Location?>\
 <$fields.Taxonomy?>\
 
 \f1\b Taxonomy \'97
-\f0\b0  \cf3 <$fields.Taxonomy/>\cf2 \
+\f0\b0  \cf0 <$fields.Taxonomy/>\cf2 \
 </$fields.Taxonomy?>\
+<$fields.Location?>\
+
+\f1\b Location \'97
+\f0\b0  \cf0 <$fields.Location/>\cf2 \
+</$fields.Location?>\
+\pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 
 \fs14 \cf0  
 \fs22 \
