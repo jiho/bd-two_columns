@@ -1,23 +1,32 @@
 <div class="record">
-	<p class="title"><$fields.Title.stringByRemovingTeX/></p>
+	
+	<!-- Publication title and link to a Google scholar search -->
+	<table summary="Title">
+		<tr>
+			<td class="title"><$fields.Title.stringByRemovingTeX.htmlString/></td>
+			<td class="search"><a href="http://scholar.google.com/scholar?&as_q=<$fields.Title.stringByRemovingTeX.htmlString/>&as_sauthors=<$authors.lastName.@firstObject/>">&rArr;</a></td>
+		</tr>
+	</table>
 
-	<table width="100%" summary="Publication content">
+	<table summary="Publication content">
 		<tr>
 			<td class="left">
-				<div class="publInfo downlight">
+				
+				<!-- Publication -->
+				<div class="pubInfo downlight">
 				
 					<$pubType=article?>
-						<p><span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
-						<span class="container"><$fields.Journal.stringByRemovingCurlyBraces/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?>, <span class="date"><$fields.Year/></span></p>
+						<span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
+						<span class="container"><$fields.Journal.stringByRemovingCurlyBraces/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?>, <span class="date"><$fields.Year/></span><br/>
 				
 					<?$pubType=book?>
-						<p><span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
-						<$fields.Publisher.stringByAppendingCommaAndSpaceIfNotEmpty/> <$fields.Address.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Edition?>edition <$fields.Edition/>, </$fields.Edition?><$fields.Pages?><$fields.Pages/> pp, </$fields.Pages?><span class="date"><$fields.Year/></span></p>
+						<span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
+						<$fields.Publisher.stringByAppendingCommaAndSpaceIfNotEmpty/> <$fields.Address.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Edition?>edition <$fields.Edition/>, </$fields.Edition?><$fields.Pages?><$fields.Pages/> pp, </$fields.Pages?><span class="date"><$fields.Year/></span><br/>
 				
 					<?$pubType=incollection?>
-						<p><span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
+						<span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><br/>
 						<span class="fieldTitle">In:</span> <span class="container"><$fields.Booktitle.stringByRemovingCurlyBraces/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?><$fields.Chapter?>, chap. <$fields.Chapter/></$fields.Chapter?>, <span class="date"><$fields.Year/></span><br/>
-						<span class="fieldTitle">Ed(s):</span> <$editors.normalizedName.@componentsJoinedByCommaAndAnd/></p>
+						<span class="fieldTitle">Ed(s):</span> <$editors.normalizedName.@componentsJoinedByCommaAndAnd/><br/>
 				
 					<?$pubType=manual?>
 						<p><span class="authors"><$authors.normalizedName.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><$fields.Organization.stringByPrependingCommaAndSpaceIfNotEmpty/><br/>
@@ -47,42 +56,62 @@
 						</$allFields.@nonEmpty></p>
 					</$pubType?>
 
-					<p>
 					<$fields.Doi?>
-						<span class="fieldName">DOI:</span> <a href="http://dx.doi.org/<$fields.Doi/>"><$fields.Doi/></a>
+						<span class="fieldName">DOI:</span> <a href="http://dx.doi.org/<$fields.Doi/>"><$fields.Doi/></a><br/>
 					</$fields.Doi?>
 					<$fields.Isbn?>
-						<span class="fieldName">ISBN:</span> <$fields.Isbn/>
+						<span class="fieldName">ISBN:</span> <$fields.Isbn/><br/>
 					</$fields.Isbn?>
-					</p>
-			
-					<p><$citeKey/> (<$pubType/>)</p>
+					
+					<p class="spacer"></p>
 
+					<$citeKey/> (<$pubType/>)
+				</div>
+
+				<!-- Custom metadata fields (keywords, etc.) -->
+				<div class="metadata downlight">
 					<$fields.Keywords?>
-						<span class="fieldName">Keywords</span> — <span class="highlight"><$fields.Keywords/></span><br/>
+						<p class="spacer"></p>
+						<!-- NB: the spacer is placed here because a pub that has metadata has, at least, keywords -->
+						<span class="fieldName">Keywords</span> &mdash; <span class="highlight"><$fields.Keywords/></span><br/>
 					</$fields.Keywords?>
 					<$fields.Location?>
-						<span class="fieldName">Location</span> — <span class="highlight"><$fields.Location/></span><br/>
+						<span class="fieldName">Location</span> &mdash; <span class="highlight"><$fields.Location/></span><br/>
 					</$fields.Location?>
 					<$fields.Taxonomy?>
-						<span class="fieldName">Taxonomy</span> — <span class="highlight"><$fields.Taxonomy/></span><br/>
+						<span class="fieldName">Taxonomy</span> &mdash; <span class="highlight"><$fields.Taxonomy/></span><br/>
 					</$fields.Taxonomy?>
 				</div>
 
+				<!-- Abstract -->
 				<$fields.Abstract?>
-					<p class="abstract"><span class="fieldName">Abstract</span> — <$fields.Abstract.htmlString/></p>
+				<div class="abstract">
+					<p class="spacer"></p>
+					<span class="fieldName">Abstract</span> &mdash; <$fields.Abstract.htmlString/>
+				</div>
 				</$fields.Abstract?>
 			</td>
 		
 			<td class="right">
+				
+				<!-- Personal anotations -->
 				<$fields.Annote?>
-					<p class="annote"><span class="fieldName">Notes</span> — <$fields.Annote.htmlString/></p>
+					<div class="annote">
+						<span class="fieldName">Notes</span> &mdash; <$fields.Annote.htmlString/>
+					</div>
 				</$fields.Annote?>
 
+				<p class="spacer"></p>
+
+				<!-- Skim notes -->
 				<$textSkimNotes?>
-					<p class="skimNotes downlight"><span class="fieldName">Skim notes:</span> <$textSkimNotes.htmlString/></p></div>
+					<div class="skimNotes downlight">
+						<span class="fieldName">Skim notes:</span> <$textSkimNotes.htmlString/>
+					</div>
 				</$textSkimNotes?>
 			</td>
 		</tr>
 	</table>
+	
+	<p></p>
 </div>
