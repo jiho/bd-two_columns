@@ -4,7 +4,7 @@
 	<table summary="Title">
 		<tr>
 			<td class="title"><$fields.Title.stringByRemovingTeX.htmlString/></td>
-			<td class="search"><a href="http://scholar.google.com/scholar?&as_q=<$fields.Title.stringByRemovingTeX.htmlString/>&as_sauthors=<$authors.lastName.@firstObject/>"><img src="twoColumns-MagnifyingGlass.png" width="14" height="13" alt="TwoColumns MagnifyingGlass"/></a></td>
+			<td class="search"><a href="http://scholar.google.com/scholar?&as_q=<$fields.Title.stringByRemovingTeX.stringByAddingPercentEscapesIncludingReserved/>&as_sauthors=<$authors.lastName.stringByAddingPercentEscapesIncludingReserved.@firstObject/>"><img src="twoColumns-MagnifyingGlass.png" width="14" height="13" alt="TwoColumns MagnifyingGlass"/></a></td>
 		</tr>
 	</table>
 
@@ -60,7 +60,7 @@
 
 					<!-- Unique identifiers -->
 					<$fields.Doi?>
-						<span class="fieldName">DOI:</span> <a href="<$urls.Doi/>"><$fields.Doi/></a><br/>
+						<span class="fieldName">DOI:</span> <a href="<$urls.Doi.stringByAddingPercentEscapesIncludingReserved/>"><$fields.Doi/></a><br/>
 					</$fields.Doi?>
 					<$fields.Isbn?>
 						<span class="fieldName">ISBN:</span> <$fields.Isbn/><br/>
