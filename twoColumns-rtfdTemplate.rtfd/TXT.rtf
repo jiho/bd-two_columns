@@ -97,6 +97,11 @@
 \f1\b ISBN:
 \f0\b0  <$fields.Isbn/>\
 </$fields.Isbn?>\
+<$fields.Pmid?>\
+
+\f1\b PMID:
+\f0\b0  {\field{\*\fldinst{HYPERLINK "http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;cmd=Search&amp;term=%3C$urls.Pmid/%3E%5Buid%5D"}}{\fldrslt <$fields.Pmid/>}}\
+</$fields.Pmid?>\
 \pard\intbl\itap1\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li120\ql\qnatural\pardirnatural
 
 \fs8 \cf0  
