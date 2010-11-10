@@ -69,6 +69,15 @@
 						<span class="fieldName">PMID:</span> <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=PubMed&amp;cmd=Search&amp;term=<$urls.Pmid/>[uid]"><$fields.Pmid/></a><br/>
 					</$fields.Pmid?>
 					
+					<$fields.Cites?>
+						<p class="spacer"></p>
+						<span class="fieldName">Cites: </span><$fields.Cites.componentsSeparatedByComma><a href="x-bdsk://<$self/>"><$self/></a></$fields.Cites.componentsSeparatedByComma><br/>
+					</$fields.Cites?>
+
+					<$fields.Cited-by?>
+						<span class="fieldName">Cited-by:</span> <$fields.Cited-by.componentsSeparatedByComma> <a href="x-bdsk://<$self/>"><$self/></a> </$fields.Cited-by.componentsSeparatedByComma><br/>
+					</$fields.Cited-by?>
+
 					<p class="spacer"></p>
 
 					<!-- LaTeX related stuff -->
