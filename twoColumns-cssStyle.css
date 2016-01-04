@@ -11,80 +11,57 @@ body {
 
 /* Layout */
 
-#content {
-	
-}
-
-.record{
-	
-}
-
 table {
-	width: 100%;
+	width: 1000%; /* strange "bug" which makes 100% not enough*/
 	border-style: none;
 /*	border: 1px solid #999;*/
-	margin-top: 4px;
+}
+
+td {
+/*	border: 1px solid #999;*/
+}
+
+.title-table {
+	margin: 6px 6px 0px 6px;
 }
 
 td.title {
-	
+	font-weight: bold;
+	font-size: 1.3em;
 }
 
 td.search {
 	text-align: right;
 	vertical-align: top;
-	font-size: 10pt;
-	width: 25px;
+	font-size: 1.3em;
+	width: 3%;
+}
+
+.content-table {
+	margin: 3px 6px 6px 6px;
 }
 
 td.left {
-	/* The table has a wider margin on the right
-	   So, to center the inter-column space, the left column need to be a bit larger */
-	width:  51.3%;
+	width: 50%;
 	vertical-align: top;
-	padding-left: 10px;
-	padding-right: 8px;
+	padding-right: 5px;
 }
 
 td.right {
-	width:  48.7%;
+	width: 50%;
 	vertical-align: top;
-	padding-left: 8px;
-	/* Should be 10 to be equivalent to the left column 
-	   But we compensate larger right margin here */
-	padding-right: 6px;
-}
-
-p {
-	
-}
-
-p.spacer {
-	font-size: 3pt;
-}
-
-/* NB: styling links does not work in the preview pane */
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-a:hover {
-	text-decoration: underline;
+	padding-left: 5px;
 }
 
 /* Regions */
-.title {
-	font-weight: bold;
-	font-size: 1.3em;
-}
-
-.pubInfo {
-	
+.info {
+	/* light grey */
+	color: #787878;
 }
 
 .metadata {
-	margin-top: 10px;
+	/* redish = "Cayenne" in crayons */
+	color: #800000;
 }
 
 .abstract {
@@ -96,10 +73,12 @@ a:hover {
 }
 
 .skimNotes {
-/*	text-align: justify;*/
+	/* yellowish */
+	color: #ac9723;
 }
 
-/* Short fields */
+
+/* Fields */
 .authors{
 	
 }
@@ -116,14 +95,14 @@ a:hover {
 	font-weight: bold;
 }
 
-/* Colors */
-.downlight{
-	/* Grey */
-	color: #787878;
+
+/* NB: styling links does not work in the preview pane */
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
-.highlight {
-	/* Redish = "Cayenne" in crayons */
-	color: #800000;
-/*	color: black;*/
+a:hover {
+	text-decoration: underline;
 }
+
