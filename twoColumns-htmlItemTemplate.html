@@ -100,20 +100,9 @@
 					</$fields.Location?>
 				</div>
 
-				<p></p>
-
-				<!-- Abstract -->
-				<$fields.Abstract?>
-				<div class="abstract">
-					<span class="fieldName">Abstract</span> &mdash; <$fields.Abstract.stringByRemovingTeX.htmlString/>
-				</div>
-				</$fields.Abstract?>
-			</td>
-
-			<td class="right">
-				
 				<!-- Personal annotations -->
 				<$fields.Annote?>
+					<p></p>
 					<div class="annote">
 						<span class="fieldName">Notes</span> &mdash; <$fields.Annote.stringByRemovingTeX.htmlString/>
 					</div>
@@ -123,10 +112,21 @@
 				<$textSkimNotes?>
 					<p></p>
 					<div class="skimNotes">
-						<span class="fieldName">Skim notes:</span> <$textSkimNotes.htmlString/>
+						<span class="fieldName">Skim notes</span><br>
+						<$textSkimNotes.htmlString/>
 					</div>
 				</$textSkimNotes?>
 			</td>
+
+			<td class="right">
+				<!-- Abstract -->
+				<$fields.Abstract?>
+				<div class="abstract">
+					<span class="fieldName">Abstract</span> &mdash; <$fields.Abstract.stringByRemovingTeX.htmlString/>
+				</div>
+				</$fields.Abstract?>
+			</td>
+				
 		</tr>
 	</table>
 	
