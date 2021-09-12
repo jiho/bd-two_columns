@@ -1,10 +1,10 @@
 ## Description
 
-This is a template to be used in the lower pane of [BibDesk](http://bibdesk.sourceforge.net "BibDesk") to display information about the selected paper. It uses two columns to be more readable and space efficient, shows the Annote field and the highlights made in [Skim](http://skim-app.sourceforge.net "Skim | Home"), displays dynamic links for DOI and PubMed IDs, and allows to search for the publication on Google Scholar (to find PDFs, check out citations, etc.).
+This is a dark mode template to be used in the lower pane of [BibDesk](http://bibdesk.sourceforge.net "BibDesk") to display information about the selected paper. It uses two columns to be more readable and space efficient, shows emojis in some meta descriptions, the Annote field and the highlights made in [Skim](http://skim-app.sourceforge.net "Skim | Home"), displays dynamic links for DOI and PubMed IDs, and allows to search for the publication on Google Scholar (to find PDFs, check out citations, etc.).
 
 Here is how it looks:
 
-<img src="screenshot.png" alt="Screenshot">
+<img src="screenshot-mod.png" alt="Screenshot">
 
 ## Installation
 
