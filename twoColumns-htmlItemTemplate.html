@@ -22,7 +22,7 @@
 						<p><span class="container"><$fields.Journal.stringByRemovingTeX/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?>, <span class="date"><$fields.Year/></span></p>
 
 					<?$pubType=book?>
-						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></p>
+						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/><$editors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/><$editors.@count=0?><?$editors.@count=1?> (Ed.)<?$editors.@count?> (Eds.)</$editors.@count?></p>
 						<p><$fields.Publisher.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/> <$fields.Address.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Edition?>edition <$fields.Edition/>, </$fields.Edition?><$fields.Pages?><$fields.Pages/> pp, </$fields.Pages?><span class="date"><$fields.Year/></span></p>
 
 					<?$pubType=incollection?>
@@ -37,6 +37,10 @@
 					<?$pubType=manual?>
 						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><$fields.Organization.stringByPrependingCommaAndSpaceIfNotEmpty/><p>
 						<p><$fields.Publisher.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/> <$fields.Address.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Pages?><$fields.Pages/>pp. </$fields.Pages?><span class="date"><$fields.Year/></span></p>
+
+					<?$pubType=masterthesis?>
+						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></p>
+						<p><$fields.School.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/><span class="date"><$fields.Year/></span></p>
 
 					<?$pubType=phdthesis?>
 						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></p>
