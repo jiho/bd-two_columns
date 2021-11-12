@@ -6,7 +6,7 @@
 
 /* General setup */
 body {
-	font: 8pt "Lucida Sans", Lucida, Verdana, sans-serif;
+	font: 14pt BlinkMacSystemFont, "Sketchnote Text", "iA Writer Quattro", "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 /* Layout */
@@ -28,6 +28,7 @@ td {
 td.title {
 	font-weight: bold;
 	font-size: 1.3em;
+	color: #03dac5d2;
 }
 
 td.search {
@@ -61,15 +62,17 @@ td.right {
 
 .metadata {
 	/* redish = "Cayenne" in crayons */
-	color: #800000;
+	color: #03dac56e;
 }
 
 .abstract {
 /*	text-align: justify;*/
+	color: #d2d2d2;
 }
 
 .annote {
 /*	text-align: justify;*/
+	color: #d2d2d2;
 }
 
 .skimNotes {
@@ -80,7 +83,7 @@ td.right {
 
 /* Fields */
 .authors{
-	
+	color:#b8b8b8;
 }
 
 .container {
@@ -89,6 +92,10 @@ td.right {
 
 .date {
 	font-weight: bold;
+}
+
+.citeKey{
+	color:#939393;
 }
 
 .fieldName {

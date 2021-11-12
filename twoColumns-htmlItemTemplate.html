@@ -4,7 +4,7 @@
 	<table class="title-table" cellpadding="0" cellspacing="0">
 		<tr>
 			<td class="title"><$fields.Title.stringByRemovingTeX.htmlString/></td>
-			<td class="search"><a href="http://scholar.google.com/scholar?&as_q=<$fields.Title.stringByRemovingTeX.stringByAddingPercentEscapesIncludingReserved/>&as_sauthors=<$authors.lastName.stringByAddingPercentEscapesIncludingReserved.@firstObject/>"><img src="data:image/png;base64,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" ></a></td>
+			<td class="search"><a href="http://scholar.google.com/scholar?&as_q=<$fields.Title.stringByRemovingTeX.stringByAddingPercentEscapesIncludingReserved/>&as_sauthors=<$authors.lastName.stringByAddingPercentEscapesIncludingReserved.@firstObject/>">🔎</a></td>
 		</tr>
 	</table>
 
@@ -22,7 +22,7 @@
 						<p><span class="container"><$fields.Journal.stringByRemovingTeX/></span>, <$fields.Volume/><$fields.Number.parenthesizedStringIfNotEmpty/><$fields.Pages?>:<$fields.Pages/></$fields.Pages?>, <span class="date"><$fields.Year/></span></p>
 
 					<?$pubType=book?>
-						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></p>
+						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/><$editors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/><$editors.@count=0?><?$editors.@count=1?> (Ed.)<?$editors.@count?> (Eds.)</$editors.@count?></p>
 						<p><$fields.Publisher.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/> <$fields.Address.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Edition?>edition <$fields.Edition/>, </$fields.Edition?><$fields.Pages?><$fields.Pages/> pp, </$fields.Pages?><span class="date"><$fields.Year/></span></p>
 
 					<?$pubType=incollection?>
@@ -37,6 +37,10 @@
 					<?$pubType=manual?>
 						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></span><$fields.Organization.stringByPrependingCommaAndSpaceIfNotEmpty/><p>
 						<p><$fields.Publisher.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/> <$fields.Address.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/><$fields.Pages?><$fields.Pages/>pp. </$fields.Pages?><span class="date"><$fields.Year/></span></p>
+
+					<?$pubType=masterthesis?>
+						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></p>
+						<p><$fields.School.stringByRemovingTeX.stringByAppendingCommaAndSpaceIfNotEmpty/><span class="date"><$fields.Year/></span></p>
 
 					<?$pubType=phdthesis?>
 						<p class="authors"><$authors.normalizedName.stringByDeTeXifyingString.stringByRemovingTeX.@componentsJoinedByCommaAndAnd/></p>
@@ -88,15 +92,15 @@
 				<!-- Custom metadata fields (keywords, etc.) -->
 				<div class="metadata">
 					<$fields.Keywords?>
-							<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADKSURBVCiRpZK9isJQEIW/uUlhI75E+q0DFoKtLKQStkqVn6exMwRMk85ii/gEKcwbWOYdwmWLLRK427gBo8gVpzzwnZkzHDHG8M64UyGO4yWwBuQJp4dhOBRF8XNjEEXRp4h8PzK+2+y6ADv1L6RpuhKRow18nQWAAkiS5MNxnFMYhrMgCCz56yUAxpjY87y57/sA1HVN13X2Bkqpfdu2X03TLLTW1vAYIcuyS9/3m7Isf6uqeinC+MQ8z88isgUGS1YDyLRIr/bgD3hURhS9cp8MAAAAAElFTkSuQmCC" > &ensp; <span class="highlight"><$fields.Keywords/></span></p>
+						<p>🔑 <span class="highlight"><$fields.Keywords/></span></p>
 					</$fields.Keywords?>
 					
 					<$fields.Taxonomy?>
-						<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAABeSURBVCiRpZDRCQAhDEPj4ax2jNMxMm3uV7i2Kj7IT1tSkiIJN9TVgZlFHwbJvjQAAJIl2j07BhnXBsUrMck9k3eQ5Z6pZtYBvDvHLpJ+aq3Jm3sKI2z0MEh2t8QTPulMTOPoba71AAAAAElFTkSuQmCC" > &ensp; <span class="highlight"><$fields.Taxonomy/></span></p>
+						<p>🧩 <span class="highlight"><$fields.Taxonomy/></span></p>
 					</$fields.Taxonomy?>
 					
 					<$fields.Location?>
-						<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAN1wAADdcBQiibeAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAE4SURBVCiRfZK/S0JxFMU/96vlEISCi76h1oZGoRYXoSWnAoMCJ997EtIf0CLOrUH6JDBqa2xsDiKKfixB6/sPoulBnhYfOPS84zmcc+69HJPEogmCYN/M6sCSpFfP8y77/f405S3LIAzDsqQLM2sCT0AdQNILcBhF0ReAWxB+Oh6PW8B7KgY+ptPpDrA/GAxcpkG3221I+vR9fxvYmMEJ8JDL5Rqe553FcbwLkM9IbzjnNiUdAKsz7H00Gh0DtFqt5VKptAXc/buBpERSc5a6BtwCtSAIrszMisXiCVDJPMHMXoBfoBZFUWxmkxne7nQ662bWA94yDYbD4R1wD5TDMDySdJ1yzrlH4LtarZ4v+gGFQqGdJMlkTvxjZg+S8kAv7UJmD9LxfX/POVeT9OycW6lUKjfzRfoDGOh10BOv2k0AAAAASUVORK5CYII=" > &ensp; <span class="highlight"><$fields.Location/></span></p>
+						<p>🏛 <span class="highlight"><$fields.Location/></span></p>
 					</$fields.Location?>
 				</div>
 
